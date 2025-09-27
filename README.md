@@ -34,7 +34,15 @@
 - 💻 **TypeScript**
 
 ---
+## 📝 Design Notes  
 
+For gestures and animations, I chose the **React Native Animated API with PanResponder** because it provides smooth, low-level control over swipe interactions while staying lightweight. This approach allowed me to build natural swipe gestures with spring animations, thresholds for swipe validation, and visual feedback like fading 👍/👎 labels. I considered Reanimated, but Animated + PanResponder was sufficient and simpler for a lightweight project.  
+
+The project structure is organized around **separation of concerns**. Data fetching and persistence live inside **custom hooks** (`useUsers`) and storage utilities (`storage.ts`) so that screens stay focused on UI logic. Reusable UI building blocks like `Card` and `Deck` handle presentation and gestures, while screens (`HomeScreen`, `SummaryScreen`) manage navigation and state orchestration. This separation makes the app easy to extend (e.g., infinite deck, new summary views) without touching gesture logic.  
+
+One trade-off was keeping **Undo** simple. Instead of fully animating a card back into the stack, I reset the state and card position, which avoids complex animation edge cases but may feel less polished compared to Tinder’s real undo animation. Another edge case was handling **resume after app restart** — I solved this by persisting both swipe results and the current index in AsyncStorage, so the deck restores seamlessly. Finally, I added a fallback when the deck ends to ensure users always reach the **Summary screen**, even if navigation didn’t auto-trigger.  
+
+---
 
 ## 🚀 Getting Started
 
