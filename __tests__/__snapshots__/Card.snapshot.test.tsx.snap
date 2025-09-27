@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`renders card snapshot 1`] = `
+<View
+  collapsable={false}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="auto"
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderRadius": 12,
+      "elevation": 4,
+      "left": "6%",
+      "opacity": 1,
+      "padding": 20,
+      "position": "absolute",
+      "shadowColor": "#000",
+      "shadowOffset": {
+        "height": 6,
+        "width": 0,
+      },
+      "shadowOpacity": 0.12,
+      "shadowRadius": 10,
+      "transform": [
+        {
+          "scale": 1,
+        },
+        {
+          "translateY": 0,
+        },
+      ],
+      "width": "88%",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 20,
+        "fontWeight": "700",
+        "marginBottom": 6,
+      }
+    }
+  >
+    John
+     
+    Doe
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#666",
+        "fontSize": 14,
+      }
+    }
+  >
+    NY
+    , 
+    USA
+  </Text>
+</View>
+`;
